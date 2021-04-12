@@ -1,4 +1,5 @@
 
+
 # Complete project details at https://RandomNerdTutorials.com
 
 try:
@@ -6,7 +7,7 @@ try:
 except:
   import socket
   
-
+import sys
 from time import sleep
 
 from machine import Pin, I2C
@@ -25,6 +26,8 @@ i2c = I2C(scl=Pin(22), sda=Pin(21), freq=10000)
 #help ESP8266 - Pin assignment
 #i2c = I2C(scl=Pin(5), sda=Pin(4), freq=10000)
 
+#ssid = 'Conectense al RIU'
+#password = '1234567890'
 ssid = 'eLiHuZeRo_4'
 password = 'bb52cade4e2f09c2eee00cd75c'
 
@@ -36,6 +39,6 @@ station.connect(ssid, password)
 while station.isconnected() == False:
   pass
 
-print('Connection successful')
+print('Conexion Establecida')
 print(station.ifconfig())
 
